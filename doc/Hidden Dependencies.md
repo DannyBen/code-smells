@@ -1,28 +1,38 @@
 # Hidden Dependencies
 
-Hidden Dependency is a situation where, inside a class, methods are silently resolving dependencies, hiding that behavior from the caller. _Hidden Dependencies_ can cause a runtime exception when a caller has not set up the appropriate environment beforehand, which, by itself, is yet another code smell: [Required Teardown/Setup Code](./required-setup-or-teardown-code.md).
+Hidden Dependency is a situation where, inside a class, methods are silently
+resolving dependencies, hiding that behavior from the caller. _Hidden
+Dependencies_ can cause a runtime exception when a caller has not set up the
+appropriate environment beforehand, which, by itself, is yet another code
+smell:
+[Required Teardown/Setup Code](Required%20Setup%20or%20Teardown%20Code.md).
 
 ## Causation
 
-Objects (which are not stateless) that require a constructor have an empty constructor - the essence of these objects should be passed on to creation, and even better if they are made immutable to avoid [Mutable Data](./mutable-data.md) Code Smell.
+Objects (which are not stateless) that require a constructor have an empty
+constructor - the essence of these objects should be passed on to creation, and
+even better if they are made immutable to avoid
+[Mutable Data](Mutable%20Data.md) Code Smell.
 
 ## Problems
 
-### **Coupling**
+### Coupling
 
 Each Global Variable is basically a hidden dependency that a tester has to mock.
 
-### **Hard to Test**
+### Hard to Test
 
-Mocking is required to test methods that use data outside of its closest scope (class or parameters).
+Mocking is required to test methods that use data outside of its closest scope
+(class or parameters).
 
-### **Error-Prone**
+### Error-Prone
 
 Changing or removing data might unintentionally break code in unexpected places.
 
-### **Decreased Comprehensibility**
+### Decreased Comprehensibility
 
-It is hard to understand the method's behavior without looking up the functions or variables outside its scope.
+It is hard to understand the method's behavior without looking up the functions
+or variables outside its scope.
 
 ## Example
 

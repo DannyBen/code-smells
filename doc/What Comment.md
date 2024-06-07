@@ -1,30 +1,49 @@
 # What Comment
 
-Recognizing all comments as Code Smells is controversial and raises many different opinions. For this reason, I define a concrete subcategory of comments named _"What" Comments_ that clearly defines only these comments, which in the vast majority will hint at something smells. The rule is simple: If a comment describes _what_ is happening in a particular code section, it is probably trying to mask some other Code Smell.
+Recognizing all comments as Code Smells is controversial and raises many
+different opinions. For this reason, I define a concrete subcategory of
+comments named _"What" Comments_ that clearly defines only these comments,
+which in the vast majority will hint at something smells. The rule is simple:
+If a comment describes _what_ is happening in a particular code section, it is
+probably trying to mask some other Code Smell.
 
-This distinction leaves room for the _"Why" Comments_ which were already defined by Wake in 2004 and were considered helpful. Wake also notes that comments that cite non-obvious algorithms are also acceptable [[1](#sources)]. I wanted to mention that comments may have their places in a few more cases, such as extreme optimizations, note discussion conclusions for future reference after a code review, or some additional explanations in domain-specific knowledge.
+This distinction leaves room for the _"Why" Comments_ which were already defined
+by Wake in 2004 and were considered helpful. Wake also notes that comments that
+cite non-obvious algorithms are also acceptable [[1](#sources)]. I wanted to
+mention that comments may have their places in a few more cases, such as
+extreme optimizations, note discussion conclusions for future reference after a
+code review, or some additional explanations in domain-specific knowledge.
 
-The problem is that _Comments_ are generally smelly, as I have mentioned. This is because they are a deodorant for other smells [[2](#sources)]. They may also quickly degrade with time and become another category of comments [Fallacious Comments](./fallacious-comment.md), which are a rotten, misleading subcategory of [_"What" Comments_].
+The problem is that _Comments_ are generally smelly, as I have mentioned. This
+is because they are a deodorant for other smells [[2](#sources)]. They may also
+quickly degrade with time and become another category of comments
+[Fallacious Comments](Fallacious%20Comment.md), which are a rotten, misleading
+subcategory of [_What Comments_].
 
 ## Causation
 
-The author sees that the code is confusing and tries to be helpful by adding explanations.
+The author sees that the code is confusing and tries to be helpful by adding
+explanations.
 
 ## Problems
 
-### **Duplication**
+### Duplication
 
-Bad docstrings, which are just duplicating everything that can be understood from the method name and parameter names & type annotations, are cluttering the code, possibly sooner or later on the first occasion, they might become [Fallacious Comments](./fallacious-comment.md).
+Bad docstrings, which are just duplicating everything that can be understood
+from the method name and parameter names & type annotations, are cluttering the
+code, possibly sooner or later on the first occasion, they might become
+[Fallacious Comments](Fallacious%20Comment.md).
 
-### **Cover up for other smells**
+### Cover up for other smells
 
-A comment that must explain what is happening in the code indicates that it can't speak for itself, which is a strong indicator of present code smells.
+A comment that must explain what is happening in the code indicates that it
+can't speak for itself, which is a strong indicator of present code smells.
 
 ## Examples
 
 
 
-_"What" Comment_ as a Grouping Label
+_What Comment_ as a Grouping Label
 
 ### Smelly
 
@@ -67,11 +86,8 @@ class Foo:
         ...
 ```
 
-
-
-
-
-_"What" Comment_ as a cover for [Uncommunicative Name](./uncommunicative-name.md) code smell.
+_What Comment_ as a cover for
+[Uncommunicative Name](Uncommunicative%20Name.md) code smell.
 
 ### Smelly
 
@@ -98,7 +114,8 @@ def get_gross_value(price: float, tax: float):
 
 
 
-_"What" Comment_ as a cover for [Uncommunicative Name](./uncommunicative-name.md) code smell.
+_What Comment_ as a cover for
+[Uncommunicative Name](Uncommunicative%20Name.md) code smell.
 
 ### Smelly
 
@@ -129,7 +146,8 @@ def destroy_character(character_id: int):
 
 ### Solution
 
-The only counter indication for removing the docstring, would be when poor auto-documentation requirements are enforced.
+The only counter indication for removing the docstring, would be when poor
+auto-documentation requirements are enforced.
 
 ```py
 def increase_attack(self, value: int):

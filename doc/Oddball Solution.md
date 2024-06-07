@@ -1,18 +1,24 @@
 # Oddball Solution
 
-If a similar problem is solved differently in different parts of the project, it is an Oddball Solution. This code smell could also have been classified under [Duplicated Code](./duplicated-code.md), although it is not exactly a one-to-one copy-paste - it is more subtle [[1](#sources)].
+If a similar problem is solved differently in different parts of the project, it
+is an Oddball Solution. This code smell could also have been classified under
+[Duplicated Code](Duplicated%20Code.md), although it is not exactly a
+one-to-one copy-paste - it is more subtle [[1](#sources)].
 
 ## Causation
 
-This smell often occurs when there is some recognized method of calling a set of classes whose interfaces are not uniform.
+This smell often occurs when there is some recognized method of calling a set of
+classes whose interfaces are not uniform.
 
 ## Problems
 
-### **Increased Complexity**
+### Increased Complexity
 
-There should be one way to deal with the problem throughout the project. There is no reason to keep two ways of dealing with one problem - just use the better one.
+There should be one way to deal with the problem throughout the project. There
+is no reason to keep two ways of dealing with one problem - just use the better
+one.
 
-### **Duplication**
+### Duplication
 
 ## Examples
 

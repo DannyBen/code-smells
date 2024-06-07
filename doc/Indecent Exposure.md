@@ -1,20 +1,26 @@
 # Indecent Exposure
 
-Unnecessarily exposing internal details is an _Indecent Exposure_ code smell. The methods and variables of a class that works only with other same class methods should be kept private.
+Unnecessarily exposing internal details is an _Indecent Exposure_ code smell.
+The methods and variables of a class that works only with other same class
+methods should be kept private.
 
-Otherwise, it might lead to [Insider Trading](./insider-trading.md) or [Feature Envy](./feature-envy.md) code smells. One should always strive to hide as many variables and methods from other classes as possible. Exposing irrelevant code contributes to the complexity of a design.
+Otherwise, it might lead to [Insider Trading](Insider%20Trading.md) or
+[Feature Envy](Feature%20Envy.md) code smells. One should always strive to hide
+as many variables and methods from other classes as possible. Exposing
+irrelevant code contributes to the complexity of a design.
 
 ## Causation
 
-The developer could have a habit of creating all the methods public at first but then forgets to change the access levels to appropriate ones.
+The developer could have a habit of creating all the methods public at first but
+then forgets to change the access levels to appropriate ones.
 
 ## Problems
 
-### **Error-Prone**
+### Error-Prone
 
 Fields accessible from outside the class baits for unnecessary coupling issues.
 
-### **Information Overload**
+### Information Overload
 
 There is no need to expose all information to everyone.
 
@@ -41,7 +47,8 @@ print(f"Count: {counter.count}")
 
 ### Solution
 
-Variable `count` is accessible only via exposed methods and is pseudo-protected from external direct changes.
+Variable `count` is accessible only via exposed methods and is pseudo-protected
+from external direct changes.
 
 ```py
 @dataclass

@@ -1,18 +1,22 @@
 # Special Case
 
-Wake addresses the complex conditional situation as a _Special Case_ code smell with two symptoms - a complex `if` statement and/or value checking [before doing the actual work](./required-setup-or-teardown-code.md) [[1](#sources)].
+Wake addresses the complex conditional situation as a _Special Case_ code smell
+with two symptoms - a complex `if` statement and/or value checking[before doing
+the actual work](Required%20Setup%20or%20Teardown%20Code.md) [[1](#sources)].
 
 ## Causation
 
-There was a need for a special case to handle. A hotfix that was never adequately fixed could also be the reason for the smell.
+There was a need for a special case to handle. A hotfix that was never
+adequately fixed could also be the reason for the smell.
 
 ## Problems
 
-### **Comprehensibility**
+### Comprehensibility
 
-The method is doing a specific task, but there is "one special case" to consider.
+The method is doing a specific task, but there is "one special case" to
+consider.
 
-### **Increased Test Complexity**
+### Increased Test Complexity
 
 Special case has to have an extra special test.
 

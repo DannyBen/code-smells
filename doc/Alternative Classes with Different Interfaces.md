@@ -1,16 +1,26 @@
 # Alternative Classes with Different Interfaces
 
-If two classes have the same functionality but different implementations, developers should merge them, or developers should extract a superclass to limit [Code Duplication](Duplicated%20Code). This smell occurs whenever a class can operate on two alternative classes (for example, take `Zombie` and `Snowman`). However, the interface to these alternative classes is different - when it operates with `Zombie`, it calls `hug_zombie()`, and with `Snowman`, it has to call `hug_snowman()`.
+If two classes have the same functionality but different implementations,
+developers should merge them, or developers should extract a superclass to
+limit [Code Duplication](Duplicated%20Code.md). This smell occurs whenever a class
+can operate on two alternative classes (for example, take `Zombie` and
+`Snowman`). However, the interface to these alternative classes is different -
+when it operates with `Zombie`, it calls `hug_zombie()`, and with `Snowman`, it
+has to call `hug_snowman()`.
 
 ## Causation
 
-This may happen due to the oversight that a functionally equivalent class already exists or when two or more developers are working on code to handle a similar situation. However, they did not know about the other's work — lack of abstract methods that enforce the common implementation method names.
+This may happen due to the oversight that a functionally equivalent class
+already exists or when two or more developers are working on code to handle a
+similar situation. However, they did not know about the other's work — lack of
+abstract methods that enforce the common implementation method names.
 
 ## Problems
 
-### **Don't Repeat Yourself Violation**
+### Don't Repeat Yourself Violation
 
-_DRY Principle_ - as the name suggests - is aimed to reduce repetition of the same code implementations.
+_DRY Principle_ - as the name suggests - is aimed to reduce repetition of the
+same code implementations.
 
 ## Example
 
@@ -18,7 +28,8 @@ _DRY Principle_ - as the name suggests - is aimed to reduce repetition of the sa
 
 ### Smelly
 
-Each individual of Humanoid have similar but personalised logic but under different method names
+Each individual of Humanoid have similar but personalised logic but under
+different method names
 
 ```py
 class Snowman(Humanoid):

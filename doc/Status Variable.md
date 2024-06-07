@@ -1,26 +1,38 @@
 # Status Variable
 
-Status Variables are mutable primitives that are initialized before an operation to store some information based on the process and are later used as a switch for some action.
+Status Variables are mutable primitives that are initialized before an operation
+to store some information based on the process and are later used as a switch
+for some action.
 
-The _Status Variables_ can be identified as a distinct code smell, although they are just a signal for five other code smells:
+The _Status Variables_ can be identified as a distinct code smell, although they
+are just a signal for five other code smells:
 
-- [Clever Code](./clever-code.md),
-- [Imperative Loops](./imperative-loops.md),
-- [Afraid To Fail](./afraid-to-fail.md),
-- [Mutable Data](./mutable-data.md),
-- [Special Case](./special-case.md).
+- [Clever Code](Clever%20Code.md),
+- [Imperative Loops](Imperative%20Loops.md),
+- [Afraid To Fail](Afraid%20To%20Fail.md),
+- [Mutable Data](Mutable%20Data.md),
+- [Special Case](Special%20Case.md).
 
-They come in different types and forms, but common examples are the `success: bool = False`-s before performing an operation block or `i: int = 0` before a loop statement. The code that has them increases in complexity by a lot, and usually for no particular reason because there most likely exists a proper solution using first-class functions. Sometimes, they clutter the code, demanding other methods or classes to make [additional checks](./special-case.md) before execution resulting in [Required Setup/Teardown Code](./required-setup-or-teardown-code.md).
+They come in different types and forms, but common examples are the `success:
+bool = False`-s before performing an operation block or `i: int = 0` before a
+loop statement. The code that has them increases in complexity by a lot, and
+usually for no particular reason because there most likely exists a proper
+solution using first-class functions. Sometimes, they clutter the code,
+demanding other methods or classes to make [additional checks]
+(./special-case.md) before execution resulting in
+[Required Setup/Teardown Code](Required%20Setup%20or%20Teardown%20Code.md).
 
 ## Causation
 
-The developer might have special cases that could be handled only inside a loop and could not figure out a better solution.
+The developer might have special cases that could be handled only inside a loop
+and could not figure out a better solution.
 
 ## Problems
 
-### **Comprehensibility**
+### Comprehensibility
 
-It is more difficult to understand the inner workings of a method than the declarative solution.
+It is more difficult to understand the inner workings of a method than the
+declarative solution.
 
 ## Examples
 
@@ -53,7 +65,8 @@ def find_foo_index(names: list[str]):
 
 ### Solution
 
-Solution, which removes the usage of Status Variables and [Clever Code](./clever-code.md).
+Solution, which removes the usage of Status Variables and
+[Clever Code](Clever%20Code.md).
 
 ```py
 def find_foo_index(names: list[str]):

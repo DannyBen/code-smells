@@ -6,17 +6,20 @@ If, after the use of a class or method, several lines of code are required to:
 - the environment requires specific actions beforehand or after its use,
 - clean up actions are required,
 
-then there is a _Required Setup or Teardown Code_ code smell. Furthermore, this may indicate [improper abstraction level](./dubious-abstraction.md).
+then there is a _Required Setup or Teardown Code_ code smell. Furthermore, this
+may indicate [improper abstraction level](Dubious%20Abstraction.md).
 
 ## Causation
 
-Some functionality was taken beyond the class during development, and the need for their use within the class itself was overlooked.
+Some functionality was taken beyond the class during development, and the need
+for their use within the class itself was overlooked.
 
 ## Problems
 
-### **Lack of Cohesion**
+### Lack of Cohesion
 
-Class can't be reused by itself - it requires extra lines of code outside of its scope to use it.
+Class can't be reused by itself - it requires extra lines of code outside of its
+scope to use it.
 
 ## Examples
 

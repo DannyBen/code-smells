@@ -1,24 +1,39 @@
 # Uncommunicative Name
 
-The name should convey meaning and meaning that is preferably not misleading ([Fallacious Method Name](./fallacious-method-name.md)). Descriptive names can save countless hours if they are good enough, just like a good abstract in a scientific article. The code should be as expressive as possible [[1](#sources)]. In the "Clean Code" by Robert Martin, this smell is "shredded" into five very descriptive smells and recommendations that underline the importance of having "good labels" [[2](#sources)]:
+The name should convey meaning and meaning that is preferably not misleading
+([Fallacious Method Name](Fallacious%20Method%20Name.md)). Descriptive names can
+save countless hours if they are good enough, just like a good abstract in a
+scientific article. The code should be as expressive as possible
+[[1](#sources)]. In the "Clean Code" by Robert Martin, this smell is "shredded"
+into five very descriptive smells and recommendations that underline the
+importance of having "good labels" [[2](#sources)]:
 
-- [Obscured Intent](./obscured-intent.md),
+- [Obscured Intent](Obscured%20Intent.md),
 - Function Names Should Say What They Do,
 - Choose Descriptive Names,
 - Unambiguous Names,
 - Names Should Describe Side-Effects
 
-Martin Fowler added this smell under the name _"Mysterious Name"_ in his third edition of the Refactoring book, saying that a good name, with much thought put into its definition, can save hours of incomprehensibility problems later. He says that titles should communicate what they do and how to use them.
+Martin Fowler added this smell under the name _"Mysterious Name"_ in his third
+edition of the Refactoring book, saying that a good name, with much thought put
+into its definition, can save hours of incomprehensibility problems later. He
+says that titles should communicate what they do and how to use them.
 
 ## Causation
 
-People tend not to return to the names of the variables or methods that they have already declared. Usually, it is the best they can come up with at the declaration moment, but maybe later on, there could have been a much better name for the thing thought of. The names could also be short, and the developer could be afraid of making them longer, thus cutting off the meaning potential.
+People tend not to return to the names of the variables or methods that they
+have already declared. Usually, it is the best they can come up with at the
+declaration moment, but maybe later on, there could have been a much better
+name for the thing thought of. The names could also be short, and the developer
+could be afraid of making them longer, thus cutting off the meaning potential.
 
 ## Problems
 
-### **Comprehensibility**
+### Comprehensibility
 
-Good names are one of the most critical factors contributing to the Clean Code feeling. If the developer can not rely on the naming of variables, methods, and classes, it drastically reduces his ability to understand everything.
+Good names are one of the most critical factors contributing to the Clean Code
+feeling. If the developer can not rely on the naming of variables, methods, and
+classes, it drastically reduces his ability to understand everything.
 
 ## Examples
 

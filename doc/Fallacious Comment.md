@@ -1,12 +1,24 @@
 # Fallacious Comment
 
-_Comments_ differ from most other syntaxes available in programming languages; it is not executed. This might lead to situations where, after code rework, the comments around it were left intact and no longer true to what they described. First and foremost, this situation should not even happen, as good comments from the _**"Why"** Comment_ family are not susceptible to this situation. If the comment explained **"what"** was happening, then it will be relevant as long as the code it explains is intact. Of course, ["What" Comments](./what-comment.md) are a Code Smell themselves, and so is [Duplicated Code](./duplicated-code.md).
+_Comments_ differ from most other syntaxes available in programming languages;
+it is not executed. This might lead to situations where, after code rework,
+the comments around it were left intact and no longer true to what they
+described. First and foremost, this situation should not even happen, as good
+comments from the _**"Why"** Comment_ family are not susceptible to this
+situation. If the comment explained **"what"** was happening, then it will be
+relevant as long as the code it explains is intact. Of course,
+[What Comments](What%20Comments.md) are a Code Smell themselves, and so is
+[Duplicated Code](Duplicated%20Code.md).
 
-This might generally happen within docstrings in real-life scenarios, which developers usually find in methods exposed to other users.
+This might generally happen within docstrings in real-life scenarios, which
+developers usually find in methods exposed to other users.
 
 ## Causation
 
-The developer was in a hurry and did not double-check that everything was up-to-date after the changes. A passing unit test could also reaffirm him - there is no practical automated way to check for the correctness of comments/docstrings.
+The developer was in a hurry and did not double-check that everything was
+up-to-date after the changes. A passing unit test could also reaffirm him -
+there is no practical automated way to check for the correctness of
+comments/docstrings.
 
 ## Problems
 
@@ -18,7 +30,7 @@ The developer does not know whether he should trust the method's signature or co
 
 
 
-_["What" Comment](./what-comment.md)_ and _Fallacious Comment_.
+_[What Comment](What%20Comment.md)_ and _Fallacious Comment_.
 
 ### Smelly
 

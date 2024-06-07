@@ -1,10 +1,19 @@
 # Callback Hell
 
-Smell with a scent similar to the [Conditional Complexity](./conditional-complexity.md), where tabs are intended deep, and the curly closing brackets can cascade like a Niagara waterfall.
+Smell with a scent similar to the
+[Conditional Complexity](Conditional%20Complexity.md), where tabs are intended
+deep, and the curly closing brackets can cascade like a Niagara waterfall.
 
-The callback is a function that is passed into another function as an argument that is meant to be executed later. One of the most popular callbacks could be the `addEventListener` in JavaScript.
+The callback is a function that is passed into another function as an argument
+that is meant to be executed later. One of the most popular callbacks could be
+the `addEventListener` in JavaScript.
 
-Alone in separation, they are not causing or indicating any problems. Instead, the long list of chained callbacks is something to watch out for. More professionally, this could be called a _Hierarchy of Callbacks_ but _(fortunately)_, it has already received a more exciting and recognizable name. There are many solutions to this problem: `Promises`, `async` functions, or splitting the significant function into separate methods.
+Alone in separation, they are not causing or indicating any problems. Instead,
+the long list of chained callbacks is something to watch out for. More
+professionally, this could be called a _Hierarchy of Callbacks_ but 
+_(fortunately)_, it has already received a more exciting and recognizable name.
+There are many solutions to this problem: `Promises`, `async` functions, or
+splitting the significant function into separate methods.
 
 ## Problems
 

@@ -1,14 +1,20 @@
 # Parallel Inheritance Hierarchies
 
-This occurs when an inheritance tree depends on another inheritance tree by composition, and to create a subclass for a class, one finds that he has to make a subclass for another class. Fowler specified that this is a special case of [Shotgun Surgery](./shotgun-surgery.md) code smell.
+This occurs when an inheritance tree depends on another inheritance tree by
+composition, and to create a subclass for a class, one finds that he has to
+make a subclass for another class. Fowler specified that this is a special case
+of [Shotgun Surgery](Shotgun%20Surgery.md) code smell.
 
 ## Causation
 
-This smell can happen naturally when trying to model a problem in a domain. The problem arises when these hierarchies are created artificially and unnecessarily (for example, by adding a standard prefix throughout the classes).
+This smell can happen naturally when trying to model a problem in a domain. The
+problem arises when these hierarchies are created artificially and
+unnecessarily (for example, by adding a standard prefix throughout the
+classes).
 
 ## Problems
 
-### **Duplication**
+### Duplication
 
 Requires additional work to be done, which might be redundant.
 
@@ -49,7 +55,8 @@ class PremiumFunctions(Functions):
 
 ### Solution
 
-When solving, one must be cautious to not violate the _Single Responsibility Principle_.
+When solving, one must be cautious to not violate the
+_Single Responsibility Principle_.
 
 ```py
 class Animal(ABC):

@@ -1,20 +1,33 @@
 # Combinatorial Explosion
 
-The Combinatorial Explosion occurs when a lot of code does almost the same thing - here, the word "almost" is crucial. The number of cases needed to cover every possible path is massive, as is the number of methods. You can grasp a solid intuition of this smell by thinking about code blocks that differ from each other only by the quantities of data or objects used in them. Wake specifies that "(...) this is a relative of [Parallel Inheritance Hierarchies](./parallel-inheritance-hierarchies.md) Code Smell, but everything has been folded into one hierarchy." [[1](#sources)].
+The Combinatorial Explosion occurs when a lot of code does almost the same
+thing - here, the word "almost" is crucial. The number of cases needed to cover
+every possible path is massive, as is the number of methods. You can grasp a
+solid intuition of this smell by thinking about code blocks that differ from
+each other only by the quantities of data or objects used in them. Wake
+specifies that "(...) this is a relative of
+[Parallel Inheritance Hierarchies](Parallel%20Inheritance%20Hierarchies.md)
+Code Smell, but everything has been folded into one hierarchy." [[1](#sources)].
 
 ## Causation
 
-Instead, what should be an independent decision, gets implemented via a hierarchy. Let us suppose that someone organized the code so that it queries an API by a specific method with specific set-in conditions and data. Sooner or later, there are just so many of these methods as the need for different queries increases in demand.
+Instead, what should be an independent decision, gets implemented via a
+hierarchy. Let us suppose that someone organized the code so that it queries an
+API by a specific method with specific set-in conditions and data. Sooner or
+later, there are just so many of these methods as the need for different
+queries increases in demand.
 
 ## Problems
 
-### **Don't Repeat Yourself Principle Violation**
+### Don't Repeat Yourself Principle Violation
 
-Introducing new functionality requires multiple versions to be introduced in various places.
+Introducing new functionality requires multiple versions to be introduced in
+various places.
 
-### **Open-Closed Principle Violation**
+### Open-Closed Principle Violation
 
-Class is not closed for modification if it "prompts" the developer to add another `elif`.
+Class is not closed for modification if it "prompts" the developer to add
+another `elif`.
 
 ## Example
 
@@ -106,7 +119,8 @@ class Minion:
 
 - Replace Inheritance with Delegation
 - Tease Apart Inheritance
-- It's pretty hard to fix, as the existence of this Code Smell (Design Smell) occurs as soon as the system's design is decided.
+- It's pretty hard to fix, as the existence of this Code Smell (Design Smell)
+  occurs as soon as the system's design is decided.
 
 #### Sources
 

@@ -1,24 +1,32 @@
 # Long Parameter List
 
-This is another code smell at the same abstraction level as [Long Method](./long-method.md) which usually occurs when three, four, or more parameters are given as input for a single method. Basically, the longer the parameter list, the harder it is to understand.
+This is another code smell at the same abstraction level as
+[Long Method](./long-method.md) which usually occurs when three, four,
+or more parameters are given as input for a single method. Basically, the
+longer the parameter list, the harder it is to understand.
 
 ## Causation
 
-In an attempt to generalize a routine with multiple variations, a developer could have passed too many parameters at one point. Another causation could be due to ignorance of the object relationship between other objects, and thus, instead, calling in all the entities via parameters [[1](#sources)].
+In an attempt to generalize a routine with multiple variations, a developer
+could have passed too many parameters at one point. Another causation could be
+due to ignorance of the object relationship between other objects, and thus,
+instead, calling in all the entities via parameters [[1](#sources)].
 
 ## Problems
 
-### **Hard to Use**
+### Hard to Use
 
 Usage of a method with many parameters requires more knowledge to use it.
 
-### **Increased Complexity**
+### Increased Complexity
 
-The input value is highly inconsistent, which creates too much variety in what might happen throughout the execution.
+The input value is highly inconsistent, which creates too much variety in what
+might happen throughout the execution.
 
-### **Single Responsibility Principle Violation**
+### Single Responsibility Principle Violation
 
-When there are too many parameters, most likely, the method tries to do too many things or has too many reasons to change.
+When there are too many parameters, most likely, the method tries to do too many
+things or has too many reasons to change.
 
 ## Example
 
