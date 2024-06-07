@@ -60,4 +60,4 @@
 | [What Comment](doc/What%20Comment.md)                                                                         | Comments that explain "what" the code does instead of "why".                |
 
 
-Extracted from <https://github.com/Luzkan/smells>
+*Extracted from <https://github.com/Luzkan/smells>*
