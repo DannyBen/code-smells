@@ -1,8 +1,8 @@
 # Code Smells Reference
 
-| Code Smell                                                                                             | Summary                                                                     |
-|:-------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------|
-| [Afraid To Fail](doc/Afraid%20To%20Fail.md)                                                                   | Reluctance to refactor due to fear of breaking the code.                    |
+| Code Smell                                                                                                    | Summary                                                                     |
+|:--------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------|
+| [Afraid To Fail](doc/Afraid%20To%20Fail.md)                                                                   | Overuse of error checking.                                                  |
 | [Alternative Classes with Different Interfaces](doc/Alternative%20Classes%20with%20Different%20Interfaces.md) | Classes that perform similar functions but have different interfaces.       |
 | [Base Class depends on Subclass](doc/Base%20Class%20depends%20on%20Subclass.md)                               | A base class that relies on its subclasses, violating hierarchy principles. |
 | [Binary Operator in Name](doc/Binary%20Operator%20in%20Name.md)                                               | Using binary operators in method or variable names, causing confusion.      |
